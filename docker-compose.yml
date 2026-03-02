@@ -1,0 +1,11 @@
+services:
+  bank-app:
+    build: .
+    ports:
+      - "5000:5000"
+    networks:
+      - nsongwa-secure-net
+
+networks:
+  nsongwa-secure-net:
+    internal: true # Zero-Trust: Database/Internal API isolation
