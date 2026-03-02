@@ -1,0 +1,24 @@
+name: Nsongwa Bank CI Audit
+
+on: [push] # Runs every time you push code to GitHub
+
+jobs:
+  security-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Security Tools
+        run: pip install checkov flask
+
+      - name: Run Security Scan
+        run: checkov -d . # Automatically audits your Dockerfile
+
+      - name: Test Docker Build
+        run: docker build -t nsongwa-bank-test . # Ensures the "vault" can still be built
