@@ -54,3 +54,4 @@ Activate the Environment: source venv/bin/activate.
 Start the Server: python3 app.py.
 
 Access the Portal: Open http://127.0.0.1:5000.
+![Nsongwa Bank Dashboard](assets/dashboard.png)
