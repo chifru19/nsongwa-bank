@@ -1,5 +1,5 @@
 # 🏦 Nsongwa Credit Union: Secure Financial Gateway v2.0
-
+![Dashboard](assets/dashboard.png)
 **Status:** 🟢 Operational | **Security Audit:** ✅ Passed (Checkov v3.2.506)
 **Core Engine:** Dockerized Python/Flask with MoMo Integration
 
