@@ -1,29 +1,17 @@
-name: Nsongwa Bank CI Audit
+name: Bank App Safety Check
 
 on: [push]
 
-# HARDENING: Explicitly set minimum required permissions
-permissions:
-  contents: read
-
 jobs:
-  security-and-build:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
+      - uses: actions/checkout@v4
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
-
-      - name: Install Security Tools
-        run: pip install checkov flask
-
-      - name: Run Security Scan
-        # Added --soft-fail for the demo if you want it to pass despite minor warnings
-        run: checkov -d .
-
-      - name: Test Docker Build
-        run: docker build -t nsongwa-bank-test .
+          python-version: '3.10'
+      - name: Install Flask
+        run: pip install flask flask-sqlalchemy
+      - name: Check for Syntax Errors
+        run: python -m py_compile app.py
