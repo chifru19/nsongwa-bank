@@ -7,7 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 from flask_jwt_extended import JWTManager
-app.config["JWT_SECRET_KEY"] = "nsongwa-bank-super-secret-jwt-key" # Change in production
+app.config["JWT_SECRET_KEY"] = os.getenv("JWT_SECRET_KEY", "nsongwa-bank-super-secret-jwt-key") # Change in production
 jwt = JWTManager(app)
 
 # Registered API Blueprints
