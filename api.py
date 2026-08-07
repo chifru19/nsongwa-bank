@@ -4,7 +4,7 @@ api_bp = Blueprint('api_unique', __name__, url_prefix='/api')
 
 @api_bp.route('/status', methods=['GET'])
 def api_status():
-    return jsonify({"status": "success", "message": "Nsongwa Bank API is running!"}), 200
+    return jsonify({"status": "success", "message": "Nsongwa Credit Union API is running!"}), 200
 
 from flask_jwt_extended import create_access_token
 

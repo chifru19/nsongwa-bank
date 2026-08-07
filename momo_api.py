@@ -56,7 +56,7 @@ def trigger_pay_as_you_go():
                 "partyIdType": "MSISDN",
                 "partyId": phone_number
             },
-            "payerMessage": "Authorize payment for Nsongwa Bank SaaS",
+            "payerMessage": "Authorize payment for Nsongwa Credit Union SaaS",
             "payeeNote": f"User ID {current_user_id} SaaS Fee"
         }
 

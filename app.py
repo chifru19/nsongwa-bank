@@ -70,7 +70,7 @@ REGISTER_HTML = '''
 DASHBOARD_HTML = '''
 <body style="font-family: sans-serif; background: #f0f2f5;">
     <div style="max-width: 600px; margin: 30px auto; background: white; padding: 40px; border-radius: 10px; border-top: 10px solid #28a745; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-        <h2>🏦 Nsongwa Bank <br><small>Welcome, {{ name }}!</small> <span style="float:right; font-size:0.5em; background:#eee; padding:5px; border-radius:5px;">ID: {{ uid }}</span></h2>
+        <h2>🏦 Nsongwa Credit Union <br><small>Welcome, {{ name }}!</small> <span style="float:right; font-size:0.5em; background:#eee; padding:5px; border-radius:5px;">ID: {{ uid }}</span></h2>
         <hr>
         <h1 style="color: #28a745; text-align: center;">{{ "{:,.0f}".format(balance) }} XAF</h1>
         
